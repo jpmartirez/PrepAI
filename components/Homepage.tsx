@@ -4,22 +4,27 @@ import InterviewTracks from "./tracks/InterviewTracks";
 const Homepage = () => {
 	return (
 		<main className="wrapper flex flex-col items-center justify-center gap-5 ">
-			{/* Badge */}
-			<div className="badge badge-emerald flex items-center gap-2 animate-breathe">
-				<span className="logo-dot" aria-hidden="true" />
-				<p className="label-sm">AI-Powered Mock Interviews</p>
-			</div>
+			<section className="text-center pt-4 animate-scale-in">
+				<div className="hero-badge mx-auto mb-5 w-fit">
+					<span
+						className="w-1.5 h-1.5 rounded-full"
+						style={{
+							background: "var(--emerald)",
+							animation: "pulse 2s infinite",
+						}}
+						aria-hidden="true"
+					/>
+					AI-Powered Mock Interviews
+				</div>
 
-			{/* Header */}
-			<h1 className="hero-title animate-scale-in">
-				Master Your Next <br /> Interview with{" "}
-				<span className="text-brand animate-blink">AI.</span>
-			</h1>
-
-			{/* Sub-header */}
-			<p className="hero-subtitle animate-scale-in">
-				Practice real-world scenarios for your dream tech role.
-			</p>
+				<h1 className="hero-title mb-4 max-w-2xl mx-auto">
+					Master Your Next <br /> Interview with{" "}
+					<em className="animate-blink">AI.</em>
+				</h1>
+				<p className="hero-subtitle max-w-lg mx-auto mb-8">
+					Practice real-world scenarios for your dream tech role.
+				</p>
+			</section>
 
 			{/* Statistics */}
 			<div className="stat-row animate-scale-in">
