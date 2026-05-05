@@ -8,6 +8,7 @@ import Logo from "./navbar/logo";
 import { NavbarProps } from "./navbar/types";
 import { NAV_ITEMS } from "./navbar/constants";
 import LiveBadge from "./navbar/livebadge";
+import { Show, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 // ── Desktop Nav Links ─────────────────────────────────────────────────────────
 
@@ -94,10 +95,12 @@ function MobileMenu({
 // ── Main Navbar ───────────────────────────────────────────────────────────────
 
 export default function Navbar({
-	isLiveSession = true,
+	isLiveSession = false,
 }: NavbarProps & { isLiveSession?: boolean }) {
 	const pathname = usePathname();
 	const [mobileOpen, setMobileOpen] = useState(false);
+
+	const { user } = useUser();
 
 	return (
 		<>
@@ -115,6 +118,15 @@ export default function Navbar({
 						{isLiveSession && <LiveBadge />}
 
 						{/* PUT CLERK USER SIGNIN BUTTON */}
+						<Show when="signed-out">
+							<SignInButton mode="modal">
+								<button className="btn-primary">Login</button>
+							</SignInButton>
+						</Show>
+						<Show when="signed-in">
+							<p className="label-sm text-muted-ai">{user?.firstName}</p>
+							<UserButton />
+						</Show>
 
 						{/* Mobile hamburger */}
 						<Hamburger

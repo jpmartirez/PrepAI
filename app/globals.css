@@ -371,8 +371,8 @@
      BUTTONS
      ═══════════════════════════════════════ */
 	.btn-primary {
-		@apply inline-flex items-center justify-center gap-2;
-		@apply px-6 py-3 rounded-[10px];
+		@apply inline-flex items-center justify-center gap-2 cursor-pointer;
+		@apply px-6 py-2 rounded-[10px];
 		@apply font-medium text-sm text-white;
 		@apply transition-all duration-200;
 		background-color: var(--emerald);
