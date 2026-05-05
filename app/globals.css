@@ -249,7 +249,7 @@
 @layer utilities {
 	/* ── Layout ── */
 	.wrapper {
-		@apply max-w-7xl px-5 mx-auto w-full;
+		@apply max-w-7xl px-5 mx-auto w-full mt-24;
 	}
 
 	.container-page {
@@ -499,6 +499,34 @@
 	}
 	.status-dot-idle {
 		background-color: var(--text-faint);
+	}
+
+	/* ═══════════════════════════════════════
+     STATS CARD
+     ═══════════════════════════════════════ */
+	.stat-row {
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		margin-bottom: 60px;
+	}
+
+	.stat-item {
+		text-align: center;
+	}
+
+	.stat-val {
+		font-family: var(--font-geist), "Geist", sans-serif;
+		font-size: 28px;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+
+	.stat-label {
+		font-size: 13px;
+		color: var(--text-faint);
+		font-family: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
+		margin-top: 2px;
 	}
 
 	/* ═══════════════════════════════════════
