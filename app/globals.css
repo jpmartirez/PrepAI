@@ -512,8 +512,11 @@
 	}
 
 	.card-interactive {
-		@apply card-base transition-all duration-250;
+		@apply rounded-xl transition-all duration-300;
 		cursor: pointer;
+		background-color: var(--bg-secondary);
+		border: 1px solid var(--border-subtle);
+		box-shadow: var(--shadow-sm);
 
 		&:hover {
 			border-color: var(--border-em);
@@ -842,7 +845,7 @@
      LANDING — INTERVIEW CARDS
      ═══════════════════════════════════════ */
 	.interview-card {
-		@apply rounded-xl p-7 cursor-pointer transition-all duration-250 relative overflow-hidden;
+		@apply rounded-xl p-7 cursor-pointer transition-all duration-300 relative overflow-hidden;
 		background-color: var(--bg-secondary);
 		border: 1px solid var(--border-subtle);
 
