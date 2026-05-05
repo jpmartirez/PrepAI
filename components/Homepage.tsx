@@ -1,11 +1,43 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 const Homepage = () => {
 	return (
-		<div>
-			<Navbar />
-		</div>
+		<main className="wrapper flex flex-col items-center justify-center gap-5">
+			{/* Badge */}
+			<div className="badge badge-emerald flex items-center gap-2">
+				<span className="logo-dot" aria-hidden="true" />
+				<p className="label-sm">AI-Powered Mock Interviews</p>
+			</div>
+
+			{/* Header */}
+			<h1 className="heading-display">
+				Master Your Next <br /> Interview with{" "}
+				<span className="text-brand">AI.</span>
+			</h1>
+
+			{/* Sub-header */}
+			<p className="body-lg">
+				Practice real-world scenarios for your dream tech role.
+			</p>
+
+			{/* Statistics */}
+			<div className="stat-row">
+				<div className="stat-item">
+					<div className="stat-val">50k+</div>
+					<div className="stat-label">Interviews Completed</div>
+				</div>
+
+				<div className="stat-item">
+					<div className="stat-val">94%</div>
+					<div className="stat-label">User Satisfaction</div>
+				</div>
+
+				<div className="stat-item">
+					<div className="stat-val">12</div>
+					<div className="stat-label">Interview Tracks</div>
+				</div>
+			</div>
+		</main>
 	);
 };
 
