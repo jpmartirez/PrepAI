@@ -252,6 +252,11 @@
 		@apply max-w-7xl px-5 mx-auto w-full mt-24;
 	}
 
+	.nav-links-wrapper,
+	.secondary-wrapper {
+		@apply max-w-7xl px-5 mx-auto w-full;
+	}
+
 	.container-page {
 		@apply pt-[calc(var(--navbar-height)+24px)] pb-16 min-h-screen;
 	}
@@ -393,8 +398,8 @@
 	}
 
 	.btn-secondary {
-		@apply inline-flex items-center justify-center gap-2;
-		@apply px-6 py-3 rounded-[10px];
+		@apply inline-flex items-center justify-center gap-2 cursor-pointer;
+		@apply px-6 py-2 rounded-[10px];
 		@apply font-medium text-sm;
 		@apply transition-all duration-200;
 		color: var(--text-primary);

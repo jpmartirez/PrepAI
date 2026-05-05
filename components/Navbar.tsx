@@ -11,12 +11,11 @@ import LiveBadge from "./navbar/livebadge";
 import { Show, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 // ── Desktop Nav Links ─────────────────────────────────────────────────────────
-
 function DesktopLinks({ pathname }: { pathname: string }) {
 	return (
 		<nav
-			className="hidden md:flex items-center gap-1"
-			aria-label="Main navigation"
+			className="hidden md:flex items-center gap-1 animate-fade-in-up"
+			aria-label="Main navigation "
 		>
 			{NAV_ITEMS.map(({ label, href }) => {
 				const active =
@@ -39,7 +38,6 @@ function DesktopLinks({ pathname }: { pathname: string }) {
 }
 
 // ── Mobile Menu ───────────────────────────────────────────────────────────────
-
 function MobileMenu({
 	open,
 	pathname,
@@ -66,7 +64,7 @@ function MobileMenu({
 					borderBottom: "1px solid var(--border-subtle)",
 				}}
 			>
-				<nav className="wrapper py-3 flex flex-col gap-1">
+				<nav className="nav-links-wrapper py-3 flex flex-col gap-1">
 					{NAV_ITEMS.map(({ label, href }) => {
 						const active =
 							pathname === href || (href !== "/" && pathname.startsWith(href));
@@ -93,7 +91,6 @@ function MobileMenu({
 }
 
 // ── Main Navbar ───────────────────────────────────────────────────────────────
-
 export default function Navbar({
 	isLiveSession = false,
 }: NavbarProps & { isLiveSession?: boolean }) {
@@ -120,7 +117,7 @@ export default function Navbar({
 						{/* PUT CLERK USER SIGNIN BUTTON */}
 						<Show when="signed-out">
 							<SignInButton mode="modal">
-								<button className="btn-primary">Login</button>
+								<button className="btn-primary ">Login</button>
 							</SignInButton>
 						</Show>
 						<Show when="signed-in">

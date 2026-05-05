@@ -12,7 +12,7 @@ export default function Hamburger({
 			onClick={onClick}
 			aria-label={open ? "Close menu" : "Open menu"}
 			aria-expanded={open}
-			className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald)"
+			className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald"
 		>
 			<span
 				className="block h-0.5 w-5 rounded-full transition-all duration-300 origin-center"

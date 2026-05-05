@@ -1,6 +1,6 @@
 import { NavItem } from "./types"; // ── Constants ────────────────────────────────────────────────────────────────
 export const NAV_ITEMS: NavItem[] = [
 	{ label: "Home", href: "/" },
-	{ label: "My History", href: "/history" },
+	{ label: "Tracks", href: "/tracks" },
 	{ label: "Pricing", href: "/pricing" },
 ];
