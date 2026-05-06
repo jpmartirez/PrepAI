@@ -4,10 +4,10 @@ import InterviewTracks from "./tracks/InterviewTracks";
 const Homepage = () => {
 	return (
 		<main className="wrapper flex flex-col items-center justify-center gap-5 ">
-			<section className="text-center pt-4 animate-scale-in">
-				<div className="hero-badge mx-auto mb-5 w-fit">
+			<section className="text-center pt-4 ">
+				<div className="hero-badge mx-auto mb-5 w-fit animate-breathe">
 					<span
-						className="w-1.5 h-1.5 rounded-full"
+						className="w-1.5 h-1.5 rounded-full "
 						style={{
 							background: "var(--emerald)",
 							animation: "pulse 2s infinite",
@@ -17,11 +17,11 @@ const Homepage = () => {
 					AI-Powered Mock Interviews
 				</div>
 
-				<h1 className="hero-title mb-4 max-w-2xl mx-auto">
+				<h1 className="hero-title mb-4 max-w-2xl mx-auto animate-scale-in">
 					Master Your Next <br /> Interview with{" "}
 					<em className="animate-blink">AI.</em>
 				</h1>
-				<p className="hero-subtitle max-w-lg mx-auto mb-8">
+				<p className="hero-subtitle max-w-lg mx-auto mb-8 animate-scale-in">
 					Practice real-world scenarios for your dream tech role.
 				</p>
 			</section>
