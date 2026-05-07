@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Track from "./types";
 import { DIFFICULTY_COLORS } from "./constants";
+import { ICONS } from "@/lib/icons";
+import { Code2 } from "lucide-react";
 
 export default function TrackCard({ track }: { track: Track }) {
 	const diff = DIFFICULTY_COLORS[track.difficulty];
+
+	const Icon = ICONS[track.icon] || Code2;
 
 	return (
 		<Link
@@ -34,7 +38,7 @@ export default function TrackCard({ track }: { track: Track }) {
 
 			{/* Icon */}
 			<div className="card-icon-wrap mb-4" style={{ color: "var(--emerald)" }}>
-				<track.icon />
+				<Icon />
 			</div>
 
 			{/* Category label */}
