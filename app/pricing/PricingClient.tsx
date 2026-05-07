@@ -27,7 +27,7 @@ export default function PricingClient({ plans, faqs, testimonials }: Props) {
 			<div className="wrapper">
 				{/* ── Hero ── */}
 				<section className="text-center pt-4 pb-14">
-					<div className="hero-badge mx-auto mb-5 w-fit">
+					<div className="hero-badge mx-auto mb-5 w-fit animate-breathe">
 						<span
 							className="w-1.5 h-1.5 rounded-full"
 							style={{

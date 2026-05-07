@@ -1,7 +1,17 @@
 import React from "react";
 import InterviewTracks from "./tracks/InterviewTracks";
+import { prisma } from "@/lib/prisma";
+import { Category, Difficulty } from "./tracks/types";
 
-const Homepage = () => {
+const Homepage = async () => {
+	const tracks = await prisma.track.findMany();
+
+	const typedTracks = tracks.map((t) => ({
+		...t,
+		difficulty: t.difficulty as Difficulty,
+		category: t.category as Category,
+	}));
+
 	return (
 		<main className="wrapper flex flex-col items-center justify-center gap-5 ">
 			<section className="text-center pt-4 ">
@@ -44,7 +54,7 @@ const Homepage = () => {
 				</div>
 			</div>
 
-			<InterviewTracks />
+			<InterviewTracks tracks={typedTracks} />
 		</main>
 	);
 };

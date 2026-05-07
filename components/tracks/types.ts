@@ -11,13 +11,13 @@ export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 export default interface Track {
 	id: string;
 	name: string;
-	category: Exclude<Category, "All">;
+	category: string;
 	difficulty: Difficulty;
 	description: string;
 	duration: string;
 	questions: number;
 	tags: string[];
-	icon: React.ElementType;
+	icon: string;
 	isPro?: boolean;
 	isNew?: boolean;
 	popular?: boolean;

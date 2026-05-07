@@ -1,10 +1,10 @@
 "use client";
 
-import { Tracks } from "./constants";
 import Link from "next/link";
 import TrackCard from "./TrackCard";
+import Track from "./types";
 
-export default function InterviewTracks() {
+export default function InterviewTracks({ tracks }: { tracks: Track[] }) {
 	return (
 		<section className="secondary-wrapper animate-fade-in-up">
 			<div className="flex items-center gap-2 mb-6">
@@ -19,7 +19,8 @@ export default function InterviewTracks() {
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-				{Tracks.filter((t) => t.isPro)
+				{tracks
+					.filter((t) => t.isPro)
 					.slice(0, 4)
 					.map((track) => (
 						<TrackCard key={track.id} track={track} />
