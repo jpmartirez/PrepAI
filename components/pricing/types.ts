@@ -11,13 +11,13 @@ export interface PlanFeature {
 export interface Plan {
 	id: string;
 	name: string;
-	badge?: string;
-	description: string;
+	badge: string | null;
+	description: string | null;
 	monthlyPrice: number;
 	annualPrice: number;
 	cta: string;
 	ctaHref: string;
-	popular?: boolean;
+	popular: boolean;
 	features: PlanFeature[];
 }
 
