@@ -1,4 +1,5 @@
 import { FAQS, PLANS, TESTIMONIALS } from "@/components/pricing/constants";
+import { Tracks } from "@/components/tracks/constants";
 import { prisma } from "@/lib/prisma";
 
 async function main() {
@@ -53,6 +54,27 @@ async function addFAQs() {
 		});
 	}
 }
+
+// async function addTracks() {
+// 	for (const track of Tracks) {
+// 		await prisma.track.create({
+// 			data: {
+// 				name: track.name,
+// 				category: track.category,
+// 				difficulty: track.difficulty,
+// 				description: track.description,
+// 				duration: track.duration,
+// 				questions: track.questions,
+// 				tags: track.tags,
+// 				icon: track.icon, // IMPORTANT FIX
+// 				isPro: track.isPro ?? false,
+// 				isNew: track.isNew ?? false,
+// 				popular: track.popular ?? false,
+// 				completions: track.completions ?? 0,
+// 			},
+// 		});
+// 	}
+// }
 
 addFAQs()
 	.then(async () => {
