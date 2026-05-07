@@ -12,9 +12,61 @@ datasource db {
   provider = "postgresql"
 }
 
-model User { 
-  id    Int     @id @default(autoincrement()) 
-  email String  @unique
-  name  String?
-} 
+// Plan model
+model Plan {
+  id            String @id
+  name          String
+  description   String?
+  monthlyPrice  Int
+  annualPrice   Int
 
+  badge         String?
+  popular       Boolean @default(false)
+
+  cta           String
+  ctaHref       String
+
+  features      PlanFeature[]
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+model PlanFeature {
+  id          String @id @default(cuid())
+
+  text        String
+  included    Boolean @default(true)
+  highlight   Boolean @default(false)
+
+  planId      String
+  plan        Plan @relation(fields: [planId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now())
+}
+
+model Testimonial {
+  id String @id @default(cuid())
+
+  quote String
+  name String
+  role String
+
+  initials String
+  color String 
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FAQ {
+  id String @id @default(cuid())
+
+  question String
+  answer String
+
+  sortOrder Int @default(0)
+  published Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
