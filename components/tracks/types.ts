@@ -12,7 +12,7 @@ export default interface Track {
 	id: string;
 	name: string;
 	category: string;
-	difficulty: Difficulty;
+	difficulty: Difficulty | string;
 	description: string;
 	duration: string;
 	questions: number;
